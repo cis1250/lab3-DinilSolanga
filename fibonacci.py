@@ -13,3 +13,4 @@ for i in range(n):
     temp = a + b  
     a = b          
     b = temp  
+# you have 2 issues with your code, 1 is looping over 'n' on line 11, you should be looping over "terms". The second is that your code breaks when a string or 0 is entered. -2
