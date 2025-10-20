@@ -3,6 +3,18 @@
 import re
 import string
 
+# Append words function
+
+def frequency(words, frequencies):
+    for word in words_list:
+    if word in words:
+        index = words.index(word)
+        frequencies[index] += 1
+    else:
+        words.append(word)
+        frequencies.append(1)
+
+
 # This function is provided — do not modify
 def is_sentence(text):
     if not isinstance(text, str) or not text.strip():
@@ -31,14 +43,6 @@ words_list = sentence.split()
 
 words = []
 frequencies = []
-
-for word in words_list:
-    if word in words:
-        index = words.index(word)
-        frequencies[index] += 1
-    else:
-        words.append(word)
-        frequencies.append(1)
-
+frequency(words, frequencies)
 for i in range(len(words)):
     print(f"{words[i]}: {frequencies[i]}")
